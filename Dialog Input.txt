@@ -1,0 +1,1792 @@
+OBJECT Page 62000 Dialog INPUT
+{
+  OBJECT-PROPERTIES
+  {
+    Date=19/01/22;
+    Time=[ 8:42:13];
+    Modified=Yes;
+    Version List=UTILS;
+  }
+  PROPERTIES
+  {
+    CaptionML=[ENU=Insert the required data;
+               ESP=Insertar el dato requerido];
+    PageType=StandardDialog;
+  }
+  CONTROLS
+  {
+    { 1000000154;0;Container;
+                ContainerType=ContentArea }
+
+    { 1000000153;1;Field  ;
+                SourceExpr=Title;
+                Visible=booTitle;
+                Editable=False;
+                Style=StrongAccent;
+                StyleExpr=TRUE;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000152;1;Field  ;
+                SourceExpr=Espacio;
+                Visible=booTitle;
+                Editable=false;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000151;1;Group  ;
+                GroupType=Group }
+
+    { 1000000150;2;Group  ;
+                GroupType=GridLayout;
+                Layout=Rows }
+
+    { 1000000149;3;Group  ;
+                Visible=VisG1;
+                GroupType=Group }
+
+    { 1000000148;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[1];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000147;4;Group  ;
+                GroupType=Group }
+
+    { 1000000146;5;Field  ;
+                SourceExpr=decimal[1];
+                Visible=VisDec1 }
+
+    { 1000000145;5;Field  ;
+                SourceExpr=integer[1];
+                Visible=VisInt1 }
+
+    { 1000000144;5;Field  ;
+                SourceExpr=text[1];
+                Visible=VisTex1 }
+
+    { 1000000143;5;Field  ;
+                SourceExpr=date[1];
+                Visible=VisDat1 }
+
+    { 1000000142;5;Field  ;
+                SourceExpr=check[1];
+                Visible=VisBoo1 }
+
+    { 1000000141;5;Field  ;
+                SourceExpr=TxtFieldRefe[1];
+                Visible=VisRecRef1;
+                OnValidate=BEGIN
+                             RecRefValidate(1,TxtFieldRefe[1]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(1);
+                            END;
+                             }
+
+    { 1000000140;5;Field  ;
+                SourceExpr=Date_Formula[1];
+                Visible=VisDateFormula1 }
+
+    { 1000000139;5;Field  ;
+                SourceExpr=Date_Time[1];
+                Visible=VisDateTime1 }
+
+    { 1000000138;5;Field  ;
+                SourceExpr=Times[1];
+                Visible=VisTime1 }
+
+    { 1000000137;5;Field  ;
+                SourceExpr=PathServer[1];
+                Visible=VisPathServer1;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(1)
+                            END;
+                             }
+
+    { 1000000136;5;Field  ;
+                SourceExpr=SheetExcel[1];
+                Visible=VisSheetExcel1;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(1);
+                            END;
+                             }
+
+    { 1000000135;5;Field  ;
+                SourceExpr=NameFile[1];
+                Visible=VisNameFile1;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(1);
+                            END;
+                             }
+
+    { 1000000158;5;Field  ;
+                SourceExpr=TextMultiLine[1];
+                Visible=VisTextMultiLine1;
+                MultiLine=Yes }
+
+    { 1000000157;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[1];
+                Visible=VisTexpass1 }
+
+    { 1000000134;3;Group  ;
+                Visible=VisG2;
+                GroupType=Group }
+
+    { 1000000133;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[2];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000132;4;Group  ;
+                GroupType=Group }
+
+    { 1000000131;5;Field  ;
+                SourceExpr=decimal[2];
+                Visible=VisDec2 }
+
+    { 1000000130;5;Field  ;
+                SourceExpr=integer[2];
+                Visible=VisInt2 }
+
+    { 1000000129;5;Field  ;
+                SourceExpr=text[2];
+                Visible=VisTex2 }
+
+    { 1000000128;5;Field  ;
+                SourceExpr=date[2];
+                Visible=VisDat2 }
+
+    { 1000000127;5;Field  ;
+                SourceExpr=check[2];
+                Visible=VisBoo2 }
+
+    { 1000000126;5;Field  ;
+                SourceExpr=TxtFieldRefe[2];
+                Visible=VisRecRef2;
+                OnValidate=BEGIN
+                             RecRefValidate(2,TxtFieldRefe[2]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(2);
+                            END;
+                             }
+
+    { 1000000125;5;Field  ;
+                SourceExpr=Date_Formula[2];
+                Visible=VisDateFormula2 }
+
+    { 1000000124;5;Field  ;
+                SourceExpr=Date_Time[2];
+                Visible=VisDateTime2 }
+
+    { 1000000123;5;Field  ;
+                SourceExpr=Times[2];
+                Visible=VisTime2 }
+
+    { 1000000122;5;Field  ;
+                SourceExpr=PathServer[2];
+                Visible=VisPathServer2;
+                OnValidate=BEGIN
+
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(2)
+                            END;
+                             }
+
+    { 1000000121;5;Field  ;
+                SourceExpr=SheetExcel[2];
+                Visible=VisSheetExcel2;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(2);
+                            END;
+                             }
+
+    { 1000000120;5;Field  ;
+                SourceExpr=NameFile[2];
+                Visible=VisNameFile2;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(2);
+                            END;
+                             }
+
+    { 1000000156;5;Field  ;
+                SourceExpr=TextMultiLine[2];
+                Visible=VisTextMultiLine2;
+                MultiLine=Yes }
+
+    { 1000000155;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[2];
+                Visible=VisTexpass2 }
+
+    { 1000000119;3;Group  ;
+                Visible=VisG3;
+                GroupType=Group }
+
+    { 1000000118;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[3];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000117;4;Group  ;
+                GroupType=Group }
+
+    { 1000000116;5;Field  ;
+                SourceExpr=decimal[3];
+                Visible=VisDec3 }
+
+    { 1000000115;5;Field  ;
+                SourceExpr=integer[3];
+                Visible=VisInt3 }
+
+    { 1000000114;5;Field  ;
+                SourceExpr=text[3];
+                Visible=VisTex3 }
+
+    { 1000000113;5;Field  ;
+                SourceExpr=date[3];
+                Visible=VisDat3 }
+
+    { 1000000112;5;Field  ;
+                SourceExpr=check[3];
+                Visible=VisBoo3 }
+
+    { 1000000111;5;Field  ;
+                SourceExpr=TxtFieldRefe[3];
+                Visible=VisRecRef3;
+                OnValidate=BEGIN
+                             RecRefValidate(3,TxtFieldRefe[3]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(3);
+                            END;
+                             }
+
+    { 1000000110;5;Field  ;
+                SourceExpr=Date_Formula[3];
+                Visible=VisDateFormula3 }
+
+    { 1000000109;5;Field  ;
+                SourceExpr=Date_Time[3];
+                Visible=VisDateTime3 }
+
+    { 1000000108;5;Field  ;
+                SourceExpr=Times[3];
+                Visible=VisTime3 }
+
+    { 1000000107;5;Field  ;
+                SourceExpr=PathServer[3];
+                Visible=VisPathServer3;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(3)
+                            END;
+                             }
+
+    { 1000000106;5;Field  ;
+                SourceExpr=SheetExcel[3];
+                Visible=VisSheetExcel3;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(3);
+                            END;
+                             }
+
+    { 1000000105;5;Field  ;
+                SourceExpr=NameFile[3];
+                Visible=VisNameFile3;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(3);
+                            END;
+                             }
+
+    { 1000000160;5;Field  ;
+                SourceExpr=TextMultiLine[3];
+                Visible=VisTextMultiLine3;
+                MultiLine=Yes }
+
+    { 1000000159;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[3];
+                Visible=VisTexpass3 }
+
+    { 1000000104;3;Group  ;
+                Visible=VisG4;
+                GroupType=Group }
+
+    { 1000000103;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[4];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000102;4;Group  ;
+                GroupType=Group }
+
+    { 1000000101;5;Field  ;
+                SourceExpr=decimal[4];
+                Visible=VisDec4 }
+
+    { 1000000100;5;Field  ;
+                SourceExpr=integer[4];
+                Visible=VisInt4 }
+
+    { 1000000099;5;Field  ;
+                SourceExpr=text[4];
+                Visible=VisTex4 }
+
+    { 1000000098;5;Field  ;
+                SourceExpr=date[4];
+                Visible=VisDat4 }
+
+    { 1000000097;5;Field  ;
+                SourceExpr=check[4];
+                Visible=VisBoo4 }
+
+    { 1000000096;5;Field  ;
+                SourceExpr=TxtFieldRefe[4];
+                Visible=VisRecRef4;
+                OnValidate=BEGIN
+                             RecRefValidate(4,TxtFieldRefe[4]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(4);
+                            END;
+                             }
+
+    { 1000000095;5;Field  ;
+                SourceExpr=Date_Formula[4];
+                Visible=VisDateFormula4 }
+
+    { 1000000094;5;Field  ;
+                SourceExpr=Date_Time[4];
+                Visible=VisDateTime4 }
+
+    { 1000000093;5;Field  ;
+                SourceExpr=Times[4];
+                Visible=VisTime4 }
+
+    { 1000000092;5;Field  ;
+                SourceExpr=PathServer[4];
+                Visible=VisPathServer4;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(4)
+                            END;
+                             }
+
+    { 1000000091;5;Field  ;
+                SourceExpr=SheetExcel[4];
+                Visible=VisSheetExcel4;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(4);
+                            END;
+                             }
+
+    { 1000000090;5;Field  ;
+                SourceExpr=NameFile[4];
+                Visible=VisNameFile4;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(4)
+                            END;
+                             }
+
+    { 1000000162;5;Field  ;
+                SourceExpr=TextMultiLine[4];
+                Visible=VisTextMultiLine4;
+                MultiLine=Yes }
+
+    { 1000000161;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[4];
+                Visible=VisTexpass4 }
+
+    { 1000000089;3;Group  ;
+                Visible=VisG5;
+                GroupType=Group }
+
+    { 1000000088;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[5];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000087;4;Group  ;
+                GroupType=Group }
+
+    { 1000000086;5;Field  ;
+                SourceExpr=decimal[5];
+                Visible=VisDec5 }
+
+    { 1000000085;5;Field  ;
+                SourceExpr=integer[5];
+                Visible=VisInt5 }
+
+    { 1000000084;5;Field  ;
+                SourceExpr=text[5];
+                Visible=VisTex5 }
+
+    { 1000000083;5;Field  ;
+                SourceExpr=date[5];
+                Visible=VisDat5 }
+
+    { 1000000082;5;Field  ;
+                SourceExpr=check[5];
+                Visible=VisBoo5 }
+
+    { 1000000081;5;Field  ;
+                SourceExpr=TxtFieldRefe[5];
+                Visible=VisRecRef5;
+                OnValidate=BEGIN
+                             RecRefValidate(5,TxtFieldRefe[5]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(5);
+                            END;
+                             }
+
+    { 1000000080;5;Field  ;
+                SourceExpr=Date_Formula[5];
+                Visible=VisDateFormula5 }
+
+    { 1000000079;5;Field  ;
+                SourceExpr=Date_Time[5];
+                Visible=VisDateTime5 }
+
+    { 1000000078;5;Field  ;
+                SourceExpr=Times[5];
+                Visible=VisTime5 }
+
+    { 1000000077;5;Field  ;
+                SourceExpr=PathServer[5];
+                Visible=VisPathServer5;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(5)
+                            END;
+                             }
+
+    { 1000000076;5;Field  ;
+                SourceExpr=SheetExcel[5];
+                Visible=VisSheetExcel5;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(5);
+                            END;
+                             }
+
+    { 1000000075;5;Field  ;
+                SourceExpr=NameFile[5];
+                Visible=VisNameFile5;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(5);
+                            END;
+                             }
+
+    { 1000000176;5;Field  ;
+                SourceExpr=TextMultiLine[5];
+                Visible=VisTextMultiLine5;
+                MultiLine=Yes }
+
+    { 1000000175;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[5];
+                Visible=VisTexpass5 }
+
+    { 1000000074;3;Group  ;
+                Visible=VisG6;
+                GroupType=Group }
+
+    { 1000000073;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[6];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000072;4;Group  ;
+                GroupType=Group }
+
+    { 1000000071;5;Field  ;
+                SourceExpr=decimal[6];
+                Visible=VisDec6 }
+
+    { 1000000070;5;Field  ;
+                SourceExpr=integer[6];
+                Visible=VisInt6 }
+
+    { 1000000069;5;Field  ;
+                SourceExpr=text[6];
+                Visible=VisTex6 }
+
+    { 1000000068;5;Field  ;
+                SourceExpr=date[6];
+                Visible=VisDat6 }
+
+    { 1000000067;5;Field  ;
+                SourceExpr=check[6];
+                Visible=VisBoo6 }
+
+    { 1000000066;5;Field  ;
+                SourceExpr=TxtFieldRefe[6];
+                Visible=VisRecRef6;
+                OnValidate=BEGIN
+                             RecRefValidate(6,TxtFieldRefe[6]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(6);
+                            END;
+                             }
+
+    { 1000000065;5;Field  ;
+                SourceExpr=Date_Formula[6];
+                Visible=VisDateFormula6 }
+
+    { 1000000064;5;Field  ;
+                SourceExpr=Date_Time[6];
+                Visible=VisDateTime6 }
+
+    { 1000000063;5;Field  ;
+                SourceExpr=Times[6];
+                Visible=VisTime6 }
+
+    { 1000000062;5;Field  ;
+                SourceExpr=PathServer[6];
+                Visible=VisPathServer6;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(6)
+                            END;
+                             }
+
+    { 1000000061;5;Field  ;
+                SourceExpr=SheetExcel[6];
+                Visible=VisSheetExcel6;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(6);
+                            END;
+                             }
+
+    { 1000000060;5;Field  ;
+                SourceExpr=NameFile[6];
+                Visible=VisNameFile6;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(6)
+                            END;
+                             }
+
+    { 1000000164;5;Field  ;
+                SourceExpr=TextMultiLine[6];
+                Visible=VisTextMultiLine6;
+                MultiLine=Yes }
+
+    { 1000000163;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[6];
+                Visible=VisTexpass6 }
+
+    { 1000000059;3;Group  ;
+                Visible=VisG7;
+                GroupType=Group }
+
+    { 1000000058;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[7];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000057;4;Group  ;
+                GroupType=Group }
+
+    { 1000000056;5;Field  ;
+                SourceExpr=decimal[7];
+                Visible=VisDec7 }
+
+    { 1000000055;5;Field  ;
+                SourceExpr=integer[7];
+                Visible=VisInt7 }
+
+    { 1000000054;5;Field  ;
+                SourceExpr=text[7];
+                Visible=VisTex7 }
+
+    { 1000000053;5;Field  ;
+                SourceExpr=date[7];
+                Visible=VisDat7 }
+
+    { 1000000052;5;Field  ;
+                SourceExpr=check[7];
+                Visible=VisBoo7 }
+
+    { 1000000051;5;Field  ;
+                SourceExpr=TxtFieldRefe[7];
+                Visible=VisRecRef7;
+                OnValidate=BEGIN
+                             RecRefValidate(7,TxtFieldRefe[7]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(7);
+                            END;
+                             }
+
+    { 1000000050;5;Field  ;
+                SourceExpr=Date_Formula[7];
+                Visible=VisDateFormula7 }
+
+    { 1000000049;5;Field  ;
+                SourceExpr=Date_Time[7];
+                Visible=VisDateTime7 }
+
+    { 1000000048;5;Field  ;
+                SourceExpr=Times[7];
+                Visible=VisTime7 }
+
+    { 1000000047;5;Field  ;
+                SourceExpr=PathServer[7];
+                Visible=VisPathServer7;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(7)
+                            END;
+                             }
+
+    { 1000000046;5;Field  ;
+                SourceExpr=SheetExcel[7];
+                Visible=VisSheetExcel7;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(7);
+                            END;
+                             }
+
+    { 1000000045;5;Field  ;
+                SourceExpr=NameFile[7];
+                Visible=VisNameFile7;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(7)
+                            END;
+                             }
+
+    { 1000000166;5;Field  ;
+                SourceExpr=TextMultiLine[7];
+                Visible=VisTextMultiLine7;
+                MultiLine=Yes }
+
+    { 1000000165;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[7];
+                Visible=VisTexpass7 }
+
+    { 1000000044;3;Group  ;
+                Visible=VisG8;
+                GroupType=Group }
+
+    { 1000000043;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[8];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000042;4;Group  ;
+                GroupType=Group }
+
+    { 1000000041;5;Field  ;
+                SourceExpr=decimal[8];
+                Visible=VisDec8 }
+
+    { 1000000040;5;Field  ;
+                SourceExpr=integer[8];
+                Visible=VisInt8 }
+
+    { 1000000039;5;Field  ;
+                SourceExpr=text[8];
+                Visible=VisTex8 }
+
+    { 1000000038;5;Field  ;
+                SourceExpr=date[8];
+                Visible=VisDat8 }
+
+    { 1000000037;5;Field  ;
+                SourceExpr=check[8];
+                Visible=VisBoo8 }
+
+    { 1000000036;5;Field  ;
+                SourceExpr=TxtFieldRefe[8];
+                Visible=VisRecRef8;
+                OnValidate=BEGIN
+                             RecRefValidate(8,TxtFieldRefe[8]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(8);
+                            END;
+                             }
+
+    { 1000000035;5;Field  ;
+                SourceExpr=Date_Formula[8];
+                Visible=VisDateFormula8 }
+
+    { 1000000034;5;Field  ;
+                SourceExpr=Date_Time[8];
+                Visible=VisDateTime8 }
+
+    { 1000000033;5;Field  ;
+                SourceExpr=Times[8];
+                Visible=VisTime8 }
+
+    { 1000000032;5;Field  ;
+                SourceExpr=PathServer[8];
+                Visible=VisPathServer8;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(8)
+                            END;
+                             }
+
+    { 1000000031;5;Field  ;
+                SourceExpr=SheetExcel[8];
+                Visible=VisSheetExcel8;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(8);
+                            END;
+                             }
+
+    { 1000000030;5;Field  ;
+                SourceExpr=NameFile[8];
+                Visible=VisNameFile8;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(8)
+                            END;
+                             }
+
+    { 1000000168;5;Field  ;
+                SourceExpr=TextMultiLine[8];
+                Visible=VisTextMultiLine8;
+                MultiLine=Yes }
+
+    { 1000000167;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[8];
+                Visible=VisTexpass8 }
+
+    { 1000000029;3;Group  ;
+                Visible=VisG9;
+                GroupType=Group }
+
+    { 1000000028;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[9];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000027;4;Group  ;
+                GroupType=Group }
+
+    { 1000000026;5;Field  ;
+                SourceExpr=decimal[9];
+                Visible=VisDec9 }
+
+    { 1000000025;5;Field  ;
+                SourceExpr=integer[9];
+                Visible=VisInt9 }
+
+    { 1000000024;5;Field  ;
+                SourceExpr=text[9];
+                Visible=VisTex9 }
+
+    { 1000000023;5;Field  ;
+                SourceExpr=date[9];
+                Visible=VisDat9 }
+
+    { 1000000022;5;Field  ;
+                SourceExpr=check[9];
+                Visible=VisBoo9 }
+
+    { 1000000021;5;Field  ;
+                SourceExpr=TxtFieldRefe[9];
+                Visible=VisRecRef9;
+                OnValidate=BEGIN
+                             RecRefValidate(9,TxtFieldRefe[9]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(9);
+                            END;
+                             }
+
+    { 1000000020;5;Field  ;
+                SourceExpr=Date_Formula[9];
+                Visible=VisDateFormula9 }
+
+    { 1000000019;5;Field  ;
+                SourceExpr=Date_Time[9];
+                Visible=VisDateTime9 }
+
+    { 1000000018;5;Field  ;
+                SourceExpr=Times[9];
+                Visible=VisTime9 }
+
+    { 1000000017;5;Field  ;
+                SourceExpr=PathServer[9];
+                Visible=VisPathServer9;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(9)
+                            END;
+                             }
+
+    { 1000000016;5;Field  ;
+                SourceExpr=SheetExcel[9];
+                Visible=VisSheetExcel9;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(9)
+                            END;
+                             }
+
+    { 1000000015;5;Field  ;
+                SourceExpr=NameFile[9];
+                Visible=VisNameFile9;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(9);
+                            END;
+                             }
+
+    { 1000000170;5;Field  ;
+                SourceExpr=TextMultiLine[9];
+                Visible=VisTextMultiLine9;
+                MultiLine=Yes }
+
+    { 1000000169;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[9];
+                Visible=VisTexpass9 }
+
+    { 1000000014;3;Group  ;
+                Visible=VisG10;
+                GroupType=Group }
+
+    { 1000000013;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption[10];
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true;
+                OnLookup=BEGIN
+                           NoModificarCampo;
+                         END;
+                          }
+
+    { 1000000012;4;Group  ;
+                GroupType=Group }
+
+    { 1000000011;5;Field  ;
+                SourceExpr=decimal[10];
+                Visible=VisDec10 }
+
+    { 1000000010;5;Field  ;
+                SourceExpr=integer[10];
+                Visible=VisInt10 }
+
+    { 1000000009;5;Field  ;
+                SourceExpr=text[10];
+                Visible=VisTex10 }
+
+    { 1000000008;5;Field  ;
+                SourceExpr=date[10];
+                Visible=VisDat10 }
+
+    { 1000000007;5;Field  ;
+                SourceExpr=check[10];
+                Visible=VisBoo10 }
+
+    { 1000000006;5;Field  ;
+                SourceExpr=TxtFieldRefe[10];
+                Visible=VisRecRef10;
+                OnValidate=BEGIN
+                             RecRefValidate(10,TxtFieldRefe[10]);
+                           END;
+
+                OnDrillDown=BEGIN
+                              RecRefDrillDown(10);
+                            END;
+                             }
+
+    { 1000000005;5;Field  ;
+                SourceExpr=Date_Formula[10];
+                Visible=VisDateFormula10 }
+
+    { 1000000004;5;Field  ;
+                SourceExpr=Date_Time[10];
+                Visible=VisDateTime10 }
+
+    { 1000000003;5;Field  ;
+                SourceExpr=Times[10];
+                Visible=VisTime10 }
+
+    { 1000000002;5;Field  ;
+                SourceExpr=PathServer[10];
+                Visible=VisPathServer10;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              PathServerDrillDown(10)
+                            END;
+                             }
+
+    { 1000000001;5;Field  ;
+                SourceExpr=SheetExcel[10];
+                Visible=VisSheetExcel10;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              SheetExcelDrillDown(10);
+                            END;
+                             }
+
+    { 1000000000;5;Field  ;
+                SourceExpr=NameFile[10];
+                Visible=VisNameFile10;
+                OnValidate=BEGIN
+                             NoModificarCampo;
+                           END;
+
+                OnDrillDown=BEGIN
+                              NameFilelDrillDown(10);
+                            END;
+                             }
+
+    { 1000000172;5;Field  ;
+                SourceExpr=TextMultiLine[10];
+                Visible=VisTextMultiLine10;
+                MultiLine=Yes }
+
+    { 1000000171;5;Field  ;
+                ExtendedDatatype=Masked;
+                SourceExpr=textPass[10];
+                Visible=VisTexpass10 }
+
+  }
+  CODE
+  {
+    VAR
+      FileManagement@1000000163 : Codeunit 419;
+      Title@1000000162 : Text;
+      booTitle@1000000161 : Boolean;
+      Espacio@1000000160 : Text;
+      Caption@1000000159 : ARRAY [100] OF Text;
+      CaptionVisible@1000000158 : ARRAY [100] OF Boolean;
+      VisG1@1000000157 : Boolean;
+      VisG2@1000000156 : Boolean;
+      VisG3@1000000155 : Boolean;
+      VisG4@1000000154 : Boolean;
+      VisG5@1000000153 : Boolean;
+      VisG6@1000000152 : Boolean;
+      VisG7@1000000151 : Boolean;
+      VisG8@1000000150 : Boolean;
+      VisG9@1000000149 : Boolean;
+      VisG10@1000000148 : Boolean;
+      check@1000000147 : ARRAY [100] OF Boolean;
+      booCheck@1000000146 : ARRAY [100] OF Boolean;
+      VisBoo1@1000000145 : Boolean;
+      VisBoo2@1000000144 : Boolean;
+      VisBoo3@1000000143 : Boolean;
+      VisBoo4@1000000142 : Boolean;
+      VisBoo5@1000000141 : Boolean;
+      VisBoo6@1000000140 : Boolean;
+      VisBoo7@1000000139 : Boolean;
+      VisBoo8@1000000138 : Boolean;
+      VisBoo9@1000000137 : Boolean;
+      VisBoo10@1000000136 : Boolean;
+      integer@1000000135 : ARRAY [100] OF Integer;
+      booInteger@1000000134 : ARRAY [100] OF Boolean;
+      VisInt1@1000000133 : Boolean;
+      VisInt2@1000000132 : Boolean;
+      VisInt3@1000000131 : Boolean;
+      VisInt4@1000000130 : Boolean;
+      VisInt5@1000000129 : Boolean;
+      VisInt6@1000000128 : Boolean;
+      VisInt7@1000000127 : Boolean;
+      VisInt8@1000000126 : Boolean;
+      VisInt9@1000000125 : Boolean;
+      VisInt10@1000000124 : Boolean;
+      decimal@1000000123 : ARRAY [100] OF Decimal;
+      booDecimal@1000000122 : ARRAY [100] OF Boolean;
+      text@1000000187 : ARRAY [100] OF Text;
+      booText@1000000186 : ARRAY [100] OF Boolean;
+      VisTex1@1000000185 : Boolean;
+      VisTex2@1000000184 : Boolean;
+      VisTex3@1000000183 : Boolean;
+      VisTex4@1000000182 : Boolean;
+      VisTex5@1000000181 : Boolean;
+      VisTex6@1000000180 : Boolean;
+      VisTex7@1000000179 : Boolean;
+      VisTex8@1000000178 : Boolean;
+      VisTex9@1000000177 : Boolean;
+      VisTex10@1000000100 : Boolean;
+      VisDec1@1000000121 : Boolean;
+      VisDec2@1000000120 : Boolean;
+      VisDec3@1000000119 : Boolean;
+      VisDec4@1000000118 : Boolean;
+      VisDec5@1000000117 : Boolean;
+      VisDec6@1000000116 : Boolean;
+      VisDec7@1000000115 : Boolean;
+      VisDec8@1000000114 : Boolean;
+      VisDec9@1000000113 : Boolean;
+      VisDec10@1000000112 : Boolean;
+      date@1000000099 : ARRAY [100] OF Date;
+      booDate@1000000098 : ARRAY [100] OF Boolean;
+      VisDat1@1000000097 : Boolean;
+      VisDat2@1000000096 : Boolean;
+      VisDat3@1000000095 : Boolean;
+      VisDat4@1000000094 : Boolean;
+      VisDat5@1000000093 : Boolean;
+      VisDat6@1000000092 : Boolean;
+      VisDat7@1000000091 : Boolean;
+      VisDat8@1000000090 : Boolean;
+      VisDat9@1000000089 : Boolean;
+      VisDat10@1000000088 : Boolean;
+      Date_Formula@1000000087 : ARRAY [100] OF DateFormula;
+      booDateFormula@1000000086 : ARRAY [100] OF Boolean;
+      VisDateFormula1@1000000085 : Boolean;
+      VisDateFormula2@1000000084 : Boolean;
+      VisDateFormula3@1000000083 : Boolean;
+      VisDateFormula4@1000000082 : Boolean;
+      VisDateFormula5@1000000081 : Boolean;
+      VisDateFormula6@1000000080 : Boolean;
+      VisDateFormula7@1000000079 : Boolean;
+      VisDateFormula8@1000000078 : Boolean;
+      VisDateFormula9@1000000077 : Boolean;
+      VisDateFormula10@1000000076 : Boolean;
+      Date_Time@1000000075 : ARRAY [100] OF DateTime;
+      booDateTime@1000000074 : ARRAY [100] OF Boolean;
+      VisDateTime1@1000000073 : Boolean;
+      VisDateTime2@1000000072 : Boolean;
+      VisDateTime3@1000000071 : Boolean;
+      VisDateTime4@1000000070 : Boolean;
+      VisDateTime5@1000000069 : Boolean;
+      VisDateTime6@1000000068 : Boolean;
+      VisDateTime7@1000000067 : Boolean;
+      VisDateTime8@1000000066 : Boolean;
+      VisDateTime9@1000000065 : Boolean;
+      VisDateTime10@1000000064 : Boolean;
+      Times@1000000063 : ARRAY [100] OF Time;
+      booTime@1000000062 : ARRAY [100] OF Boolean;
+      VisTime1@1000000061 : Boolean;
+      VisTime2@1000000060 : Boolean;
+      VisTime3@1000000059 : Boolean;
+      VisTime4@1000000058 : Boolean;
+      VisTime5@1000000057 : Boolean;
+      VisTime6@1000000056 : Boolean;
+      VisTime7@1000000055 : Boolean;
+      VisTime8@1000000054 : Boolean;
+      VisTime9@1000000053 : Boolean;
+      VisTime10@1000000052 : Boolean;
+      RecRef@1000000051 : ARRAY [100] OF RecordRef;
+      BooRecRef@1000000050 : ARRAY [100] OF Boolean;
+      VisRecRef1@1000000049 : Boolean;
+      VisRecRef2@1000000048 : Boolean;
+      VisRecRef3@1000000047 : Boolean;
+      VisRecRef4@1000000046 : Boolean;
+      VisRecRef5@1000000045 : Boolean;
+      VisRecRef6@1000000044 : Boolean;
+      VisRecRef7@1000000043 : Boolean;
+      VisRecRef8@1000000042 : Boolean;
+      VisRecRef9@1000000041 : Boolean;
+      VisRecRef10@1000000040 : Boolean;
+      TxtFieldRefe@1000000039 : ARRAY [100] OF Text;
+      NoField@1000000038 : ARRAY [100] OF Integer;
+      SheetExcel@1000000037 : ARRAY [100] OF Text;
+      PathExcel@1000000036 : ARRAY [100] OF Text;
+      NameFileExcel@1000000035 : ARRAY [100] OF Text;
+      booSheetExcel@1000000034 : ARRAY [100] OF Boolean;
+      VisSheetExcel1@1000000033 : Boolean;
+      VisSheetExcel2@1000000032 : Boolean;
+      VisSheetExcel3@1000000031 : Boolean;
+      VisSheetExcel4@1000000030 : Boolean;
+      VisSheetExcel5@1000000029 : Boolean;
+      VisSheetExcel6@1000000028 : Boolean;
+      VisSheetExcel7@1000000027 : Boolean;
+      VisSheetExcel8@1000000026 : Boolean;
+      VisSheetExcel9@1000000025 : Boolean;
+      VisSheetExcel10@1000000024 : Boolean;
+      NameFile@1000000023 : ARRAY [100] OF Text;
+      booNameFile@1000000022 : ARRAY [100] OF Boolean;
+      VisNameFile1@1000000021 : Boolean;
+      VisNameFile2@1000000020 : Boolean;
+      VisNameFile3@1000000019 : Boolean;
+      VisNameFile4@1000000018 : Boolean;
+      VisNameFile5@1000000017 : Boolean;
+      VisNameFile6@1000000016 : Boolean;
+      VisNameFile7@1000000015 : Boolean;
+      VisNameFile8@1000000014 : Boolean;
+      VisNameFile9@1000000013 : Boolean;
+      VisNameFile10@1000000012 : Boolean;
+      PathServer@1000000011 : ARRAY [100] OF Text;
+      booPathServer@1000000010 : ARRAY [100] OF Boolean;
+      VisPathServer1@1000000009 : Boolean;
+      VisPathServer2@1000000008 : Boolean;
+      VisPathServer3@1000000007 : Boolean;
+      VisPathServer4@1000000006 : Boolean;
+      VisPathServer5@1000000005 : Boolean;
+      VisPathServer6@1000000004 : Boolean;
+      VisPathServer7@1000000003 : Boolean;
+      VisPathServer8@1000000002 : Boolean;
+      VisPathServer9@1000000001 : Boolean;
+      VisPathServer10@1000000000 : Boolean;
+      TextMultiLine@1000000175 : ARRAY [100] OF Text;
+      booTextMultiLine@1000000174 : ARRAY [100] OF Boolean;
+      VisTextMultiLine1@1000000173 : Boolean;
+      VisTextMultiLine2@1000000172 : Boolean;
+      VisTextMultiLine3@1000000171 : Boolean;
+      VisTextMultiLine4@1000000170 : Boolean;
+      VisTextMultiLine5@1000000169 : Boolean;
+      VisTextMultiLine6@1000000168 : Boolean;
+      VisTextMultiLine7@1000000167 : Boolean;
+      VisTextMultiLine8@1000000166 : Boolean;
+      VisTextMultiLine9@1000000165 : Boolean;
+      VisTextMultiLine10@1000000164 : Boolean;
+      textPass@1000000176 : ARRAY [100] OF Text;
+      booTextPass@1000000111 : ARRAY [100] OF Boolean;
+      VisTexPass1@1000000110 : Boolean;
+      VisTexPass2@1000000109 : Boolean;
+      VisTexPass3@1000000108 : Boolean;
+      VisTexPass4@1000000107 : Boolean;
+      VisTexPass5@1000000106 : Boolean;
+      VisTexPass6@1000000105 : Boolean;
+      VisTexPass7@1000000104 : Boolean;
+      VisTexPass8@1000000103 : Boolean;
+      VisTexPass9@1000000102 : Boolean;
+      VisTexPass10@1000000101 : Boolean;
+
+    PROCEDURE SetTitle@1000000008(Titulo@1100225000 : Text);
+    BEGIN
+      booTitle := TRUE;
+      Title := Titulo;
+    END;
+
+    PROCEDURE SetDecimal@1000000003(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Decimal);
+    BEGIN
+      decimal[Posicion] := DefaultValue;
+      booDecimal[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetInteger@1000000002(Posicion@1000000000 : Integer;Titulo@1100225001 : Text;DefaultValue@1000000001 : Integer);
+    BEGIN
+      integer[Posicion] := DefaultValue;
+      booInteger[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetText@1000000001(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Text);
+    BEGIN
+      text[Posicion] := DefaultValue;
+      booText[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+
+      VisBooleans;
+    END;
+
+    PROCEDURE SetDate@1000000000(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Date);
+    BEGIN
+      date[Posicion] := DefaultValue;
+      booDate[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetBoolean@1000000014(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Boolean);
+    BEGIN
+      check[Posicion] := DefaultValue;
+      booCheck[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetDateFormula@1000000019(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : DateFormula);
+    BEGIN
+      Date_Formula[Posicion] := DefaultValue;
+      booDateFormula[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetDateTime@1000000020(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : DateTime);
+    BEGIN
+      Date_Time[Posicion] := DefaultValue;
+      booDateTime[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetTime@1000000021(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Time);
+    BEGIN
+      Times[Posicion] := DefaultValue;
+      booTime[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetRec@1000000011(Posicion@1000000002 : Integer;Titulo@1000000001 : Text;DefaultValue@1000000000 : Text;RecVariant@1000000004 : Variant;FieldNumber@1000000003 : Integer;RecGetView@1000000005 : Text);
+    BEGIN
+      RecRef[Posicion].GETTABLE(RecVariant);
+      RecRef[Posicion].FILTERGROUP(2);
+      RecRef[Posicion].SETVIEW(RecGetView);
+      RecRef[Posicion].FILTERGROUP(0);
+      NoField[Posicion] := FieldNumber;
+      TxtFieldRefe[Posicion] := DefaultValue;
+      BooRecRef[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetSheetExcel@1000000027(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Text);
+    BEGIN
+      SheetExcel[Posicion] := DefaultValue;
+      booSheetExcel[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetNameFile@1000000025(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Text);
+    BEGIN
+      NameFile[Posicion] := DefaultValue;
+      booNameFile[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetPathServer@1000000028(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Text);
+    BEGIN
+      PathServer[Posicion] := DefaultValue;
+      booPathServer[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+      VisBooleans;
+    END;
+
+    PROCEDURE SetTextMultiLine@1000000029(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Text);
+    BEGIN
+      TextMultiLine[Posicion] := DefaultValue;
+      booTextMultiLine[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+
+      VisBooleans;
+    END;
+
+    PROCEDURE SetTextPass@1000000035(Posicion@1000000000 : Integer;Titulo@1100225000 : Text;DefaultValue@1000000001 : Text);
+    BEGIN
+      textPass[Posicion] := DefaultValue;
+      booTextPass[Posicion] := TRUE;
+      Caption[Posicion] := Titulo;
+      CaptionVisible[Posicion] := TRUE;
+
+      VisBooleans;
+    END;
+
+    PROCEDURE GetDecimal@1000000007(Posicion@1000000000 : Integer) : Decimal;
+    BEGIN
+      EXIT( decimal[Posicion] ) ;
+    END;
+
+    PROCEDURE GetInteger@1000000006(Posicion@1000000000 : Integer) : Integer;
+    BEGIN
+      EXIT( integer[Posicion] );
+    END;
+
+    PROCEDURE GetText@1000000005(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( text[Posicion] );
+    END;
+
+    PROCEDURE GetDate@1000000004(Posicion@1000000000 : Integer) : Date;
+    BEGIN
+      EXIT( date[Posicion] );
+    END;
+
+    PROCEDURE GetBoolean@1000000013(Posicion@1000000000 : Integer) : Boolean;
+    BEGIN
+      EXIT( check[Posicion] );
+    END;
+
+    PROCEDURE GetDateFormula@1000000024(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( FORMAT(Date_Formula[Posicion]) );
+    END;
+
+    PROCEDURE GetDateTime@1000000023(Posicion@1000000000 : Integer) : DateTime;
+    BEGIN
+      EXIT( Date_Time[Posicion] );
+    END;
+
+    PROCEDURE GetTime@1000000022(Posicion@1000000000 : Integer) : Time;
+    BEGIN
+      EXIT( Times[Posicion] );
+    END;
+
+    PROCEDURE GetRec@1000000012(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT(TxtFieldRefe[Posicion]);
+    END;
+
+    PROCEDURE GetSheetExcel@1000000031(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( SheetExcel[Posicion] );
+    END;
+
+    PROCEDURE GetNameExcel@1000000037(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( NameFileExcel[Posicion] );
+    END;
+
+    PROCEDURE GetPathExcel@1000000036(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( PathExcel[Posicion] );
+    END;
+
+    PROCEDURE GetNameFile@1000000026(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( NameFile[Posicion] );
+    END;
+
+    PROCEDURE GetPathServer@1000000030(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( PathServer[Posicion] );
+    END;
+
+    PROCEDURE GetTextMultiLine@1000000039(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( TextMultiLine[Posicion] );
+    END;
+
+    PROCEDURE GetTextPass@1000000038(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT( textPass[Posicion] );
+    END;
+
+    LOCAL PROCEDURE RecRefDrillDown@1000000015(Posicion@1000000000 : Integer);
+    VAR
+      FieldRefe@1000000001 : FieldRef;
+      RecV@1000000002 : Variant;
+    BEGIN
+      RecV := RecRef[Posicion];
+      IF PAGE.RUNMODAL(0,RecV) = ACTION :: LookupOK THEN BEGIN
+        RecRef[Posicion] := RecV;
+        FieldRefe := RecRef[Posicion].FIELD(NoField[Posicion]);
+        TxtFieldRefe[Posicion] := FORMAT(FieldRefe.VALUE);
+      END;
+    END;
+
+    LOCAL PROCEDURE SheetExcelDrillDown@1000000032(Posicion@1000000000 : Integer);
+    VAR
+      ExcelBuffer@1000000001 : Record 370;
+      Path@1000000002 : Text;
+    BEGIN
+      Path :=FileManagement.OpenFileDialog('titulo','','');
+
+      NameFileExcel[Posicion] := FileManagement.GetFileName(Path);
+      SheetExcel[Posicion] := ExcelBuffer.SelectSheetsName(Path);
+
+      Path:=FileManagement.UploadFileSilent(Path);
+
+      PathExcel[Posicion] := Path;
+    END;
+
+    LOCAL PROCEDURE NameFilelDrillDown@1000000033(Posicion@1000000000 : Integer);
+    VAR
+      Path@1000000002 : Text;
+    BEGIN
+      Path:=FileManagement.OpenFileDialog('titulo','','');
+
+      NameFile[Posicion]:= FileManagement.GetFileName(Path);
+    END;
+
+    LOCAL PROCEDURE PathServerDrillDown@1000000034(Posicion@1000000000 : Integer);
+    BEGIN
+      PathServer[Posicion]:=FileManagement.OpenFileDialog('titulo','','');
+      PathServer[Posicion]:=FileManagement.UploadFileSilent(PathServer[Posicion]);
+    END;
+
+    LOCAL PROCEDURE VisBooleans@1000000009();
+    BEGIN
+      VisBoo1 := booCheck[1];
+      VisBoo2 := booCheck[2];
+      VisBoo3 := booCheck[3];
+      VisBoo4 := booCheck[4];
+      VisBoo5 := booCheck[5];
+      VisBoo6 := booCheck[6];
+      VisBoo7 := booCheck[7];
+      VisBoo8 := booCheck[8];
+      VisBoo9 := booCheck[9];
+      VisBoo10 := booCheck[10];
+
+      VisDat1 := booDate[1];
+      VisDat2 := booDate[2];
+      VisDat3 := booDate[3];
+      VisDat4 := booDate[4];
+      VisDat5 := booDate[5];
+      VisDat6 := booDate[6];
+      VisDat7 := booDate[7];
+      VisDat8 := booDate[8];
+      VisDat9 := booDate[9];
+      VisDat10 := booDate[10];
+
+      VisDateFormula1 := booDateFormula[1];
+      VisDateFormula2 := booDateFormula[2];
+      VisDateFormula3 := booDateFormula[3];
+      VisDateFormula4 := booDateFormula[4];
+      VisDateFormula5 := booDateFormula[5];
+      VisDateFormula6 := booDateFormula[6];
+      VisDateFormula7 := booDateFormula[7];
+      VisDateFormula8 := booDateFormula[8];
+      VisDateFormula9 := booDateFormula[9];
+      VisDateFormula10 := booDateFormula[10];
+
+      VisDateTime1 := booDateTime[1];
+      VisDateTime2 := booDateTime[2];
+      VisDateTime3 := booDateTime[3];
+      VisDateTime4 := booDateTime[4];
+      VisDateTime5 := booDateTime[5];
+      VisDateTime6 := booDateTime[6];
+      VisDateTime7 := booDateTime[7];
+      VisDateTime8 := booDateTime[8];
+      VisDateTime9 := booDateTime[9];
+      VisDateTime10 := booDateTime[10];
+
+      VisDec1 := booDecimal[1];
+      VisDec2 := booDecimal[2];
+      VisDec3 := booDecimal[3];
+      VisDec4 := booDecimal[4];
+      VisDec5 := booDecimal[5];
+      VisDec6 := booDecimal[6];
+      VisDec7 := booDecimal[7];
+      VisDec8 := booDecimal[8];
+      VisDec9 := booDecimal[9];
+      VisDec10 := booDecimal[10];
+
+      VisG1 := CaptionVisible[1];
+      VisG2 := CaptionVisible[2];
+      VisG3 := CaptionVisible[3];
+      VisG4 := CaptionVisible[4];
+      VisG5 := CaptionVisible[5];
+      VisG6 := CaptionVisible[6];
+      VisG7 := CaptionVisible[7];
+      VisG8 := CaptionVisible[8];
+      VisG9 := CaptionVisible[9];
+      VisG10 := CaptionVisible[10];
+
+      VisInt1 := booInteger[1];
+      VisInt2 := booInteger[2];
+      VisInt3 := booInteger[3];
+      VisInt4 := booInteger[4];
+      VisInt5 := booInteger[5];
+      VisInt6 := booInteger[6];
+      VisInt7 := booInteger[7];
+      VisInt8 := booInteger[8];
+      VisInt9 := booInteger[9];
+      VisInt10 := booInteger[10];
+
+      VisRecRef1 := BooRecRef[1];
+      VisRecRef2 := BooRecRef[2];
+      VisRecRef3 := BooRecRef[3];
+      VisRecRef4 := BooRecRef[4];
+      VisRecRef5 := BooRecRef[5];
+      VisRecRef6 := BooRecRef[6];
+      VisRecRef7 := BooRecRef[7];
+      VisRecRef8 := BooRecRef[8];
+      VisRecRef9 := BooRecRef[9];
+      VisRecRef10 := BooRecRef[10];
+
+      VisTex1 := booText[1];
+      VisTex2 := booText[2];
+      VisTex3 := booText[3];
+      VisTex4 := booText[4];
+      VisTex5 := booText[5];
+      VisTex6 := booText[6];
+      VisTex7 := booText[7];
+      VisTex8 := booText[8];
+      VisTex9 := booText[9];
+      VisTex10 := booText[10];
+
+      VisTime1 := booTime[1];
+      VisTime2 := booTime[2];
+      VisTime3 := booTime[3];
+      VisTime4 := booTime[4];
+      VisTime5 := booTime[5];
+      VisTime6 := booTime[6];
+      VisTime7 := booTime[7];
+      VisTime8 := booTime[8];
+      VisTime9 := booTime[9];
+      VisTime10 := booTime[10];
+
+      VisPathServer1 := booPathServer[1];
+      VisPathServer2 := booPathServer[2];
+      VisPathServer3 := booPathServer[3];
+      VisPathServer4 := booPathServer[4];
+      VisPathServer5 := booPathServer[5];
+      VisPathServer6 := booPathServer[6];
+      VisPathServer7 := booPathServer[7];
+      VisPathServer8 := booPathServer[8];
+      VisPathServer9 := booPathServer[9];
+      VisPathServer10 := booPathServer[10];
+
+      VisSheetExcel1 := booSheetExcel[1];
+      VisSheetExcel2 := booSheetExcel[2];
+      VisSheetExcel3 := booSheetExcel[3];
+      VisSheetExcel4 := booSheetExcel[4];
+      VisSheetExcel5 := booSheetExcel[5];
+      VisSheetExcel6 := booSheetExcel[6];
+      VisSheetExcel7 := booSheetExcel[7];
+      VisSheetExcel8 := booSheetExcel[8];
+      VisSheetExcel9 := booSheetExcel[9];
+      VisSheetExcel10 := booSheetExcel[10];
+
+      VisNameFile1 := booNameFile[1];
+      VisNameFile2 := booNameFile[2];
+      VisNameFile3 := booNameFile[3];
+      VisNameFile4 := booNameFile[4];
+      VisNameFile5 := booNameFile[5];
+      VisNameFile6 := booNameFile[6];
+      VisNameFile7 := booNameFile[7];
+      VisNameFile8 := booNameFile[8];
+      VisNameFile9 := booNameFile[9];
+      VisNameFile10 := booNameFile[10];
+
+      VisTextMultiLine1 := booTextMultiLine[1];
+      VisTextMultiLine2 := booTextMultiLine[2];
+      VisTextMultiLine3 := booTextMultiLine[3];
+      VisTextMultiLine4 := booTextMultiLine[4];
+      VisTextMultiLine5 := booTextMultiLine[5];
+      VisTextMultiLine6 := booTextMultiLine[6];
+      VisTextMultiLine7 := booTextMultiLine[7];
+      VisTextMultiLine8 := booTextMultiLine[8];
+      VisTextMultiLine9 := booTextMultiLine[9];
+      VisTextMultiLine10 := booTextMultiLine[10];
+
+      VisTexPass1 := booTextPass[1];
+      VisTexPass2 := booTextPass[2];
+      VisTexPass3 := booTextPass[3];
+      VisTexPass4 := booTextPass[4];
+      VisTexPass5 := booTextPass[5];
+      VisTexPass6 := booTextPass[6];
+      VisTexPass7 := booTextPass[7];
+      VisTexPass8 := booTextPass[8];
+      VisTexPass9 := booTextPass[9];
+      VisTexPass10 := booTextPass[10];
+    END;
+
+    LOCAL PROCEDURE NoModificarCampo@1000000017();
+    BEGIN
+      ERROR('');
+      CurrPage.UPDATE;
+    END;
+
+    LOCAL PROCEDURE RecRefValidate@1000000010(Posicion@1000000000 : Integer;Value@1000000004 : Text);
+    VAR
+      FieldRefe@1000000001 : FieldRef;
+      RecV@1000000002 : Variant;
+      error01@1000000003 : TextConst 'ENU=The %1 value is not in the %2 table;ESP=El valor %1 no esta dentro de la tabla %2';
+    BEGIN
+      FieldRefe := RecRef[Posicion].FIELD(NoField[Posicion]);
+      FieldRefe.VALUE := Value;
+      IF RecRef[Posicion].FIND('=') THEN
+        EXIT;
+
+      ERROR(error01,Value,RecRef[Posicion].CAPTION);
+    END;
+
+    BEGIN
+    {
+      #Creado por Esteve Sanpons Carballares.
+      #https://github.com/Esanpons
+      #Se da acceso libre a modificar y utilizar este objeto libremente. Siempre y cuando se haga referencia al autor.
+    }
+    END.
+  }
+}
+
