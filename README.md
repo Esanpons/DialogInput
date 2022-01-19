@@ -4,18 +4,19 @@ Dialogo en Navision para pedir al usuario un tipo de dato en concreto
 Se crea esta funcionalidad dado que en las versiones nuevas el método INPUT del Dialog está obsoleto.
  
 Hemos creado esta funcionalidad ampliándola para poder llegar a pedir:
-· Boleanos
-· Enteros
-· Decimales
-· Textos
-· Fechas
-· Date Formulas
-· Date Time
-· Time
-· Records
-· Hoja del Excel
-· Nombre de un archivo
-· Ruta del archivo
+  - Boleanos
+  - Enteros
+  - Decimales
+  - Textos
+  - Fechas
+  - Date Formulas
+  - Date Time
+  - Time
+  - Records
+  - Hoja del Excel
+  - Nombre de un archivo
+  - Ruta del archivo
+ 
  
 Podemos llegar a pedir hasta 10 tipos diferentes de datos en un mismo dialogo
 
