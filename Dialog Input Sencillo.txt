@@ -1,0 +1,87 @@
+OBJECT Page 62000 Dialog INPUT Sencillo
+{
+  OBJECT-PROPERTIES
+  {
+    Date=19/01/22;
+    Time=[ 8:58:07];
+    Modified=Yes;
+    Version List=UTILS;
+  }
+  PROPERTIES
+  {
+    CaptionML=[ENU=Insert the required data;
+               ESP=Insertar el dato requerido];
+    PageType=StandardDialog;
+  }
+  CONTROLS
+  {
+    { 1000000154;0;Container;
+                ContainerType=ContentArea }
+
+    { 1000000153;1;Field  ;
+                SourceExpr=Title;
+                Visible=booTitle;
+                Editable=False;
+                Style=StrongAccent;
+                StyleExpr=TRUE }
+
+    { 1000000151;1;Group  ;
+                GroupType=Group }
+
+    { 1000000150;2;Group  ;
+                GroupType=GridLayout;
+                Layout=Rows }
+
+    { 1000000149;3;Group  ;
+                GroupType=Group }
+
+    { 1000000148;4;Field  ;
+                ExtendedDatatype=None;
+                SourceExpr=Caption;
+                Editable=FALSE;
+                MultiLine=Yes;
+                Style=Strong;
+                StyleExpr=true }
+
+    { 1000000147;4;Group  ;
+                GroupType=Group }
+
+    { 1000000157;5;Field  ;
+                SourceExpr=TextValue }
+
+  }
+  CODE
+  {
+    VAR
+      Title@1000000162 : Text;
+      Caption@1000000159 : Text;
+      TextValue@1000000000 : Text;
+      booTitle@1000000001 : Boolean;
+
+    PROCEDURE SetTitle@1000000008(Titulo@1100225000 : Text);
+    BEGIN
+      booTitle := TRUE;
+      Title := Titulo;
+    END;
+
+    PROCEDURE SetText@1000000001(Titulo@1100225000 : Text;DefaultValue@1000000001 : Text);
+    BEGIN
+      TextValue := DefaultValue;
+      Caption := Titulo;
+    END;
+
+    PROCEDURE GetText@1000000005(Posicion@1000000000 : Integer) : Text;
+    BEGIN
+      EXIT(TextValue);
+    END;
+
+    BEGIN
+    {
+      #Creado por Esteve Sanpons Carballares.
+      #https://github.com/Esanpons
+      #Se da acceso libre a modificar y utilizar este objeto libremente. Siempre y cuando se haga referencia al autor.
+    }
+    END.
+  }
+}
+
