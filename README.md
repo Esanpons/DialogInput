@@ -19,6 +19,12 @@ Hemos creado esta funcionalidad ampliándola para poder llegar a pedir:
  
 Podemos llegar a pedir hasta 10 tipos diferentes de datos en un mismo dialogo
 
+<p align="center">
+  <a href="https://www.mitrags.com"><img src="https://www.dropbox.com/s/ersv53wea9yb6bb/01.png" alt="Mitra GS" width="400" /></a>
+</p>
+<h1 align="center">
+The MGS App boilerplate
+</h1>
 
 Programación
 Instrucciones
