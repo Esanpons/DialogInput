@@ -20,7 +20,7 @@ Hemos creado esta funcionalidad ampliándola para poder llegar a pedir:
 Podemos llegar a pedir hasta 10 tipos diferentes de datos en un mismo dialogo
 
 <p align="center">
-  <a><img src="https://www.dropbox.com/s/ersv53wea9yb6bb/01.png" width="400" /></a>
+  <a><img src="https://www.dropbox.com/s/ersv53wea9yb6bb/01.png?dl=0" width="400" /></a>
 </p>
 
 
